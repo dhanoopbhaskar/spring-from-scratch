@@ -8,6 +8,7 @@ public class HelloWorldController {
 
     @RequestMapping("/")
     public String hello() {
+        System.out.println("Inside hello()");
         return "hello world";
     }
 }
