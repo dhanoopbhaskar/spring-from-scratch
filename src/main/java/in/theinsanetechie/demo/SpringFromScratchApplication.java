@@ -9,19 +9,8 @@ import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
-@EnableWebMvc
 @ComponentScan
 public class SpringFromScratchApplication {
-
-    @Bean
-    public TomcatServletWebServerFactory servletContainer() {
-        return new TomcatServletWebServerFactory();
-    }
-
-    @Bean
-    DispatcherServlet dispatcherServlet() {
-        return new DispatcherServlet();
-    }
 
     public static void main(String[] args) {
         SpringApplication.run(SpringFromScratchApplication.class, args);
