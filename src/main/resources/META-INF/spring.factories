@@ -1,0 +1,5 @@
+# Import Selectors
+in.theinsanetechie.demo.config.EnableMyAutoConfiguration=\
+in.theinsanetechie.demo.config.TomcatConfiguration,\
+in.theinsanetechie.demo.config.DispatcherServletConfiguration,\
+in.theinsanetechie.demo.config.MvcConfiguration

@@ -1,16 +1,23 @@
 package in.theinsanetechie.demo.config;
 
+import org.springframework.beans.factory.BeanClassLoaderAware;
 import org.springframework.context.annotation.DeferredImportSelector;
+import org.springframework.core.io.support.SpringFactoriesLoader;
 import org.springframework.core.type.AnnotationMetadata;
 
-public class MyAutoConfigurationImportSelector implements DeferredImportSelector {
+public class MyAutoConfigurationImportSelector implements DeferredImportSelector, BeanClassLoaderAware {
+
+    private ClassLoader classLoader;
 
     @Override
     public String[] selectImports(AnnotationMetadata importingClassMetadata) {
-        return new String[] {
-                "in.theinsanetechie.demo.config.TomcatConfiguration",
-                "in.theinsanetechie.demo.config.DispatcherServletConfiguration",
-                "in.theinsanetechie.demo.config.MvcConfiguration"
-        };
+        return SpringFactoriesLoader
+                .loadFactoryNames(EnableMyAutoConfiguration.class, this.classLoader)
+                .toArray(new String[]{});
+    }
+
+    @Override
+    public void setBeanClassLoader(ClassLoader classLoader) {
+        this.classLoader = classLoader;
     }
 }
