@@ -1,6 +1,6 @@
 package in.theinsanetechie.demo;
 
-import in.theinsanetechie.demo.config.MySpringBootApplication;
+import in.theinsanetechie.config.MySpringBootApplication;
 import org.springframework.boot.SpringApplication;
 
 @MySpringBootApplication

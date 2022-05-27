@@ -1,4 +1,4 @@
-package in.theinsanetechie.demo.config;
+package in.theinsanetechie.config;
 
 import org.springframework.context.annotation.Import;
 
