@@ -6,7 +6,7 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 import org.springframework.util.ClassUtils;
 
 @Configuration
-@Conditional(UndertowConfiguration.OnUndertowCondition.class)
+@ConditionalOnMyClass(className = "io.undertow.Undertow")
 public class UndertowConfiguration {
 
     @Bean
@@ -14,11 +14,4 @@ public class UndertowConfiguration {
         return new UndertowServletWebServerFactory();
     }
 
-    static class OnUndertowCondition implements Condition {
-
-        @Override
-        public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
-            return ClassUtils.isPresent("io.undertow.Undertow", context.getClassLoader());
-        }
-    }
 }
