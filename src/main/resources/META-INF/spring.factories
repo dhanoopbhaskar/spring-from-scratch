@@ -3,4 +3,5 @@ in.theinsanetechie.config.EnableMyAutoConfiguration=\
 in.theinsanetechie.config.TomcatConfiguration,\
 in.theinsanetechie.config.UndertowConfiguration,\
 in.theinsanetechie.config.DispatcherServletConfiguration,\
-in.theinsanetechie.config.MvcConfiguration
+in.theinsanetechie.config.MvcConfiguration,\
+in.theinsanetechie.config.PropertyPlaceholderConfiguration
