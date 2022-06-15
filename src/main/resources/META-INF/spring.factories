@@ -5,3 +5,8 @@ in.theinsanetechie.config.UndertowConfiguration,\
 in.theinsanetechie.config.DispatcherServletConfiguration,\
 in.theinsanetechie.config.MvcConfiguration,\
 in.theinsanetechie.config.PropertyPlaceholderConfiguration
+
+
+# Properties processor
+org.springframework.boot.env.EnvironmentPostProcessor=\
+in.theinsanetechie.config.CustomPropertiesPostProcessor

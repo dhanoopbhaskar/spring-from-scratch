@@ -10,7 +10,7 @@ import org.springframework.util.ClassUtils;
 @ConditionalOnMyClass(className = "org.apache.catalina.startup.Tomcat")
 public class TomcatConfiguration {
 
-    @Value("${port:8081}")
+    @Value("${port:8080}")
     private int port;
 
     @Bean
